@@ -1,0 +1,12 @@
+@use './variable' as *;
+
+.btn {
+    text-transform: uppercase;
+    border: unset;
+    padding: 1.5rem 3rem;
+
+    &--primary {
+        background-color: $color-primary;
+        color: $color-white;
+    }
+}

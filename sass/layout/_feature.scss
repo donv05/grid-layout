@@ -1,0 +1,31 @@
+@use '../variable' as *;
+/* start features*/
+.features {
+    grid-column: center-start/center-end;
+    // background-color: $color-primary-dark;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+}
+
+.feature {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 1rem;
+
+    &__icon {
+        grid-column: 1/2;
+        width: 4.5rem;
+        height: 4.5rem;
+        grid-row: 1/-1;
+    }
+
+    // &__text {
+    //     margin-bottom: 1rem;
+    //     color: black;
+    // }
+}
+
+/* start features*/

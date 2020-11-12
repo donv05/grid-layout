@@ -1,0 +1,17 @@
+@use '../variable' as *;
+/* start sidebar*/
+
+.sidebar {
+    grid-column: sidebar-start/sidebar-end;
+    grid-row: 1/-1;
+    background-color: $color-primary;
+    border: unset;
+
+    $layout-breakpoint-small: 1220px;
+
+    @media (max-width: $layout-breakpoint-small) {
+        grid-column: full-start/full-end;
+        grid-row: initial;
+    }
+}
+/* end sidebar*/

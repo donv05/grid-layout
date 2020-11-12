@@ -1,0 +1,40 @@
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;  //10px/16px = 62.5% -> 1rem = 10px
+    font-family: 'Nunito', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns:  [sidebar-start] 8rem [sidebar-end full-start] 1fr 
+                            [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 
+                            1fr [full-end];
+    
+
+    grid-template-rows: auto min-content 40vw repeat(3, min-content);
+
+    $layout-breakpoint-small: 1220px;
+
+    @media (max-width: $layout-breakpoint-small) {
+        grid-template-columns:  [full-start] 1fr 
+                            [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 
+                            1fr [full-end];
+    
+        grid-template-rows: auto min-content 40vw repeat(3, min-content);
+    }
+
+
+    & > * {
+        padding: 3rem;
+        font-size: 1rem;
+    }
+}

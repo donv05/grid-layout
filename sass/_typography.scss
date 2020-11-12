@@ -1,0 +1,41 @@
+@use './variable' as *;
+
+%heading {
+    font-family: $font-family;
+    font-weight: 400;
+}
+
+.heading-1{
+    @extend %heading;
+    font-size: 5rem;
+    color: $color-white;
+}
+
+.heading-2{
+    @extend %heading;
+    font-size: 4rem;
+    font-style: italic;
+    font-weight: 400;
+    
+}
+.heading-3{
+    @extend %heading;
+    font-size: 2.2rem;
+    color: $color-primary;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    &--highlight {
+        color: $color-white;
+    }
+   
+}
+
+.heading-4{
+    @extend %heading;
+    font-size: 1.9rem;
+
+    &--highlight {
+        color: $color-white;
+    }
+}

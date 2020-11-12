@@ -1,0 +1,45 @@
+@use '../variable' as *;
+
+.footer {
+    grid-column: full-start/full-end;
+    background-color: $color-black;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+
+    &__copyright{
+        margin-top: 3rem;
+        text-align: center;
+    }
+
+}
+
+.nav {
+    list-style-type: none;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-template-rows: auto;
+
+    &__item {
+        justify-self: center;
+    }
+
+    &__link {
+        color: $color-white;
+        text-transform: uppercase;
+        font-size: 1rem;
+        padding: 2rem;
+        display: block;
+        text-decoration: none;
+        transition: all .5s;
+        &:hover,
+        &:visited {
+            background-color: rgba(#fff, .05);
+            transform: translateY(10%) scale(110%, 110%);
+            font-size: 1.1rem;
+        }
+        
+    }
+}

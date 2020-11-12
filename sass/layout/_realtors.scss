@@ -1,0 +1,43 @@
+@use '../variable' as *;
+
+.realtors {
+    grid-column:  col-end 6/ full-end;
+    background-color: $color-yellow;
+    // background-color: green;
+    padding-top: 4rem;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    grid-template-rows: max-content auto;
+    justify-items: center;
+
+    &__list {
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        // grid-template-rows: auto;
+        grid-template-rows: min-content min-content min-content;
+        grid-gap: 2rem;
+    }
+
+    &__img {
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+    }
+
+    &__details {
+        justify-self: left;
+        align-self: center;
+    }
+
+    &__sold {
+        font-size: 1rem;
+        color: $color-white;
+    }
+
+    @media (max-width: $layout-breakpoint-small) {
+        grid-column: full-start/full-end;
+        // grid-row: initial;
+    }
+}
